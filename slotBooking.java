@@ -27,11 +27,45 @@ public class slotBooking extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
+			
 		String name=request.getParameter("name");
+		System.out.println(name);
+		String phoneno=request.getParameter("phoneno");
 		String email=request.getParameter("email");
-		
+	
 		String date=request.getParameter("date");
 		String time=request.getParameter("time");
+		String brand=request.getParameter("brnd");
+		
+		
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");  
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/thatstdio","root","12345");
+			Statement stmt=con.createStatement();
+		
+				String qry="insert into SlotBooking values (?,?,?,?,?,?)";		
+				PreparedStatement ps=con.prepareStatement(qry);
+				
+				ps.setString(1, name);
+				ps.setString(2, phoneno);
+				ps.setString(3, email);
+				
+				
+				
+				ps.setString(4, date);
+				ps.setString(5, time);
+				ps.setString(6,brand );				
+				ps.executeUpdate();
+				ps.close();
+				con.close();
+				
+				response.sendRedirect("feedback_Error.html");
+			
+		} 
+		catch (Exception e) {
+			out.println(e);
+		}
     }
 }
