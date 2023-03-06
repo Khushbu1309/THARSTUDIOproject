@@ -28,7 +28,7 @@ public class slotBooking extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 			
-		String name=request.getParameter("name");
+			String name=request.getParameter("name");
 		System.out.println(name);
 		String phoneno=request.getParameter("phoneno");
 		String email=request.getParameter("email");
