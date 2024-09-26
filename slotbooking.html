@@ -11,20 +11,20 @@
 <body
     style="background-color:peachpuff; text-align: center; text-size-adjust:20px;">
     <h><b>  DO YOU WANT TO BOOK YOUR THAR SLOT</b></h>
-    <p><form action="backend.thar"style="text-align: left down;" ><br>
-       <div> &emsp;&emsp;&emsp;NAME:<input type="text"></div><br>
-       <div> THAR MODEL:<input type="text number"></div><br>
-       <div>&emsp;&emsp;EMAIL-ID:<input type="email" name="myemail"></div><br>
-       <div>DATE:<input type="date" name="mytime"></div><br>
-       <div>TIME:<input type="time" name="mytime"></div><br>
-       <div>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;THAR MODEL<select name="model" id="mycar">
-        <option models="LX 4-Str Hard Top">LX 4-Str Hard Top</option>
-        <option models="LX 4-Str Hard Top Diesel RWD">LX 4-Str Hard Top Diesel RWD</option>
-        <option models="Thar LX 4-Str Hard Top AT">Thar LX 4-Str Hard Top AT</option>
-        <option models="Thar LX 4-Str Hard Top Diesel AT">Thar LX 4-Str Hard Top Diesel AT</option>
-        <option models="Top Automatic Thar LX 4-Str Hard Top Diesel AT">Top Automatic Thar LX 4-Str Hard Top Diesel AT</option>
-        <option models="AX Opt 4-Str Convert Top Diesel">AX Opt 4-Str Convert Top Diesel</option></select></div><br><br>
-        <div><input type="submit"value="SUBMIT NOW">&emsp;&emsp;
+    <p><form action="slotBooking" method="post" style="text-align: left down;" ><br>
+       <div> &emsp;&emsp;&emsp;NAME:<input type="text" name="name" placeholder="Complete Name"></div><br>
+       <div> MOBILE(whatsapp):<input type="number" name="phoneno" placeholder="contact no." ></div><br>
+       <div>&emsp;&emsp;EMAIL-ID:<input type="email" name="email" placeholder="xyz@gmail.com"></div><br>
+       <div>DATE:<input type="date" name="date" placeholder="date"></div><br>
+       <div>TIME:<input type="time" name="time" placeholder="Time for pick-Up"></div><br>
+       <div>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;CAR?:<select name="model" id="mycar">
+        <option models="MAHINDRA THAR">MAHINDRA THAR</option>
+        <option models="RANGE ROVER">RANGE ROVER</option>
+        <option models="PORSCHE 911 TURBO S">PORSCHE 911 TURBO S</option>
+        <option models="BENTLEY FLYING SPUR">BENTLEY FLYING SPUR</option>
+        <option models="ROLLS ROYCE WRAITH">ROLLS ROYCE WRAITH</option>
+        <option models="LAMBORGHINI AVENTADOR">LAMBORGHINI AVENTADOR</option></select></div><br><br>
+        <div><input type="submit" name="submit">&emsp;&emsp;
             <input type="reset"value="RESET NOW"></div>
      </style></form></p>
  
